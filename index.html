@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Inkly | Blog Management</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+</head>
+
+<body>
+
+
+<!-- ================= HEADER ================= -->
+
+<header class="site-header">
+
+    <a href="#" class="logo">
+        INKLY<span>.</span>
+    </a>
+
+
+    <nav class="navigation">
+
+        <a href="#home">
+            Home
+        </a>
+
+        <a href="#articles">
+            Articles
+        </a>
+
+        <a href="#about">
+            About
+        </a>
+
+    </nav>
+
+
+    <button
+        class="dark-btn"
+        id="adminOpen"
+    >
+        Author Studio
+    </button>
+
+</header>
+
+
+
+<!-- ================= MAIN ================= -->
+
+<main>
+
+
+    <!-- ================= HERO ================= -->
+
+    <section
+        class="hero"
+        id="home"
+    >
+
+        <div class="hero-content">
+
+            <p class="eyebrow">
+                THE DIGITAL JOURNAL
+            </p>
+
+
+            <h1>
+                Ideas worth
+                <br>
+                <em>reading.</em>
+            </h1>
+
+
+            <p class="hero-text">
+
+                A modern publishing space for
+                technology, design, careers and
+                the ideas shaping tomorrow.
+
+            </p>
+
+
+            <a
+                href="#articles"
+                class="hero-link"
+            >
+                Explore Articles →
+            </a>
+
+        </div>
+
+
+
+        <div class="hero-card">
+
+            <span>
+                EDITOR'S NOTE
+            </span>
+
+
+            <h2>
+                Build. Learn.
+                <br>
+                Share what matters.
+            </h2>
+
+
+            <p>
+                Thoughtful stories from
+                curious people.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= ARTICLES ================= -->
+
+    <section
+        class="articles"
+        id="articles"
+    >
+
+        <div class="section-head">
+
+            <div>
+
+                <p class="eyebrow">
+                    LATEST STORIES
+                </p>
+
+                <h2>
+                    Fresh from the journal
+                </h2>
+
+            </div>
+
+
+            <div class="filters">
+
+                <input
+                    type="text"
+                    id="search"
+                    placeholder="Search articles..."
+                >
+
+
+                <select id="category">
+
+                    <option value="all">
+                        All Topics
+                    </option>
+
+                    <option value="Technology">
+                        Technology
+                    </option>
+
+                    <option value="Design">
+                        Design
+                    </option>
+
+                    <option value="Career">
+                        Career
+                    </option>
+
+                    <option value="AI">
+                        AI
+                    </option>
+
+                </select>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- BLOG POSTS -->
+
+        <div
+            id="posts"
+            class="post-grid"
+        ></div>
+
+
+        <!-- EMPTY STATE -->
+
+        <div
+            id="noPosts"
+            class="empty hidden"
+        >
+
+            <h3>
+                No articles found
+            </h3>
+
+            <p>
+                Try another search term
+                or category.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= ABOUT ================= -->
+
+    <section
+        class="about"
+        id="about"
+    >
+
+        <div>
+
+            <p class="eyebrow">
+                WHY INKLY
+            </p>
+
+
+            <h2>
+                Good content deserves
+                <br>
+                good presentation.
+            </h2>
+
+        </div>
+
+
+        <p>
+
+            Inkly is a modern blog management
+            experience designed to demonstrate
+            responsive layouts, content management,
+            search, categories and publishing
+            workflows using HTML, CSS and JavaScript.
+
+        </p>
+
+    </section>
+
+</main>
+
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <span>
+        © 2026 Inkly Journal
+    </span>
+
+    <span>
+        Built for QSkill Internship • Task 3
+    </span>
+
+</footer>
+
+
+
+<!-- ================= AUTHOR MODAL ================= -->
+
+<div
+    class="modal hidden"
+    id="adminModal"
+>
+
+    <div class="studio">
+
+
+        <button
+            class="close"
+            id="closeAdmin"
+        >
+            ×
+        </button>
+
+
+        <p class="eyebrow">
+            AUTHOR STUDIO
+        </p>
+
+
+        <h2>
+            Manage Articles
+        </h2>
+
+
+
+        <!-- BLOG FORM -->
+
+        <form id="postForm">
+
+            <input
+                type="hidden"
+                id="postId"
+            >
+
+
+            <label>
+
+                Article Title
+
+                <input
+                    type="text"
+                    id="postTitle"
+                    placeholder="Enter article title"
+                    maxlength="100"
+                    required
+                >
+
+            </label>
+
+
+
+            <label>
+
+                Short Description
+
+                <textarea
+                    id="postExcerpt"
+                    rows="3"
+                    placeholder="Write a short article description..."
+                    required
+                ></textarea>
+
+            </label>
+
+
+
+            <div class="two">
+
+
+                <label>
+
+                    Category
+
+                    <select id="postCategory">
+
+                        <option>
+                            Technology
+                        </option>
+
+                        <option>
+                            Design
+                        </option>
+
+                        <option>
+                            Career
+                        </option>
+
+                        <option>
+                            AI
+                        </option>
+
+                    </select>
+
+                </label>
+
+
+
+                <label>
+
+                    Author
+
+                    <input
+                        type="text"
+                        id="postAuthor"
+                        value="Savalla Nikshitha"
+                    >
+
+                </label>
+
+
+            </div>
+
+
+
+            <label>
+
+                Article Content
+
+                <textarea
+                    id="postContent"
+                    rows="8"
+                    placeholder="Write your complete article..."
+                    required
+                ></textarea>
+
+            </label>
+
+
+
+            <div class="form-actions">
+
+                <button
+                    type="button"
+                    class="secondary"
+                    id="newPost"
+                >
+                    New Article
+                </button>
+
+
+                <button
+                    type="submit"
+                    class="dark-btn"
+                >
+                    Save & Publish
+                </button>
+
+            </div>
+
+        </form>
+
+
+
+        <hr>
+
+
+
+        <h3>
+            Manage Existing Articles
+        </h3>
+
+
+        <div id="manageList"></div>
+
+
+    </div>
+
+</div>
+
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
